@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "extends": ["plugin:vue/vue3-essential", "eslint:recommended", "@vue/typescript/recommended", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "vue/no-deprecated-slot-attribute": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/attribute-hyphenation": ["error", "never", { "ignore": [] }],
+    "vue/v-on-event-hyphenation": ["error", "never", { "ignore": [] }],
+    /*
+      透過這個來幫助 withDefault props 沒有給到 ?，造成一堆 missing require props warning
+      https://eslint.vuejs.org/rules/no-required-prop-with-default.html
+    */
+    "vue/no-required-prop-with-default": "error",
+    "vue/max-attributes-per-line": "off",
+    "vue/no-v-html": "off",
+    "vue/require-prop-types": "off",
+    "vue/require-default-prop": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/no-setup-props-destructure": "off",
+    "vue/html-self-closing": [
+      "error",
+      {
+        "html": {
+          "component": "always",
+          "normal": "never",
+          "void": "always"
+        },
+        "svg": "always",
+        "math": "always"
+      }
+    ],
+    "vue/component-tags-order": [
+      "error",
+      {
+        "order": ["script", "template", "style"]
+      }
+    ],
+    "no-console": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+    "vue/component-name-in-template-casing": [
+      "error",
+      "PascalCase",
+      {
+        "registeredComponentsOnly": true,
+        "ignores": []
+      }
+    ]
+  }
+}
