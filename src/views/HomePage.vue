@@ -1,5 +1,8 @@
 <script setup lang="ts">
-  import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+  import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+  import { useDarkMode } from '@/composable/useDarkMode';
+
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 </script>
 
 <template>
@@ -19,6 +22,8 @@
 
       <div class="px-[20px]">
         <h1 class="text-[24px] underline">hello tailwind css</h1>
+
+        <IonButton @click="() => toggleDarkMode()">{{ isDarkMode ? 'light' : 'dark' }}</IonButton>
       </div>
     </IonContent>
   </IonPage>
