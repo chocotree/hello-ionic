@@ -1,8 +1,14 @@
 <script setup lang="ts">
   import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
   import { useDarkMode } from '@/composable/useDarkMode';
+  import { OnLongPress } from '@vueuse/components';
 
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+
+  const isLongPress = ref(false);
+  const handleLongPress = () => {
+    isLongPress.value = true;
+  };
 </script>
 
 <template>
@@ -24,6 +30,10 @@
         <h1 class="text-[24px] underline">hello tailwind css</h1>
 
         <IonButton @click="() => toggleDarkMode()">{{ isDarkMode ? 'light' : 'dark' }}</IonButton>
+
+        <OnLongPress :options="{ delay: 251 }" @trigger="handleLongPress">
+          <IonButton>isLongPress: {{ isLongPress }}</IonButton>
+        </OnLongPress>
       </div>
     </IonContent>
   </IonPage>

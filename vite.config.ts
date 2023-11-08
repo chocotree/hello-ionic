@@ -12,6 +12,12 @@ export default defineConfig({
     AutoImport({
       imports: [
         'vue', //
+
+        {
+          '@vueuse/components': [
+            'OnLongPress', // import { useMouse } from '@vueuse/core',
+          ],
+        },
       ],
     }),
   ],
