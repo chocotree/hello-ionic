@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
   import { useDarkMode } from '@/composable/useDarkMode';
   import { OnLongPress } from '@vueuse/components';
 

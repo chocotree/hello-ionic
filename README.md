@@ -51,3 +51,7 @@
       ]
   }
   ```
+
+## How to auto import ionic component
+
+  [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components)
