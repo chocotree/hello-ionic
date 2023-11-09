@@ -25,6 +25,12 @@ export default defineConfig({
       resolvers: [
         IonicResolver(), //
       ],
+
+      /**
+       * 避免掃描專案的 components
+       */
+      dirs: 'nothing',
+      extensions: ['nothing'],
     }),
   ],
 
