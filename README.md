@@ -15,9 +15,9 @@
   }
   ```
 
-3. 不要加入 tailwindcss preflight
+<!-- 3. 不要加入 tailwindcss preflight
 
-  移除 @tailwind base;
+  移除 @tailwind base; -->
 
 4. 設定 dark mode 模式
 

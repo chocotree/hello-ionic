@@ -1,39 +1,19 @@
 <script setup lang="ts">
-  import { useDarkMode } from '@/composable/useDarkMode';
-  import { OnLongPress } from '@vueuse/components';
-
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
-
-  const isLongPress = ref(false);
-  const handleLongPress = () => {
-    isLongPress.value = true;
-  };
+  import BasePageLayout from '@/components/layout/BasePageLayout.vue';
 </script>
 
 <template>
-  <IonPage>
-    <IonHeader :translucent="true">
-      <IonToolbar>
-        <IonTitle>Hello App</IonTitle>
-      </IonToolbar>
-    </IonHeader>
-
-    <IonContent :fullscreen="true">
-      <IonHeader collapse="condense">
-        <IonToolbar>
-          <IonTitle size="large">Home Page</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      <div class="px-[20px]">
-        <h1 class="text-[24px] underline">hello tailwind css</h1>
-
-        <IonButton @click="() => toggleDarkMode()">{{ isDarkMode ? 'light' : 'dark' }}</IonButton>
-
-        <OnLongPress :options="{ delay: 251 }" @trigger="handleLongPress">
-          <IonButton>isLongPress: {{ isLongPress }}</IonButton>
-        </OnLongPress>
-      </div>
-    </IonContent>
-  </IonPage>
+  <BasePageLayout>
+    <template #pageTitle>我的日記</template>
+    <div class="w-full px-[15px] pt-[20px]">
+      <ul class="w-full">
+        <li v-for="i in 10" :key="i" class="w-full mb-[15px]">
+          <!-- NoteCard -->
+          <div class="w-full h-[80px] border border-[#c9c9c9] rounded-[6px]">
+            {{ i }}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </BasePageLayout>
 </template>
