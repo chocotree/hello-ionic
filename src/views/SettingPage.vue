@@ -10,7 +10,7 @@
   <BasePageLayout>
     <template #pageTitle>設定</template>
     <div class="px-[15px] pt-[20px]">
-      <IonButton @click="() => toggleDarkMode()">
+      <IonButton @click="() => toggleDarkMode()" color="dark">
         <IonIcon v-if="isDarkMode" :icon="sunny" />
         <IonIcon v-else :icon="moon" />
       </IonButton>

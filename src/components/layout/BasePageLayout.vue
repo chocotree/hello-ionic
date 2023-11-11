@@ -1,11 +1,22 @@
 <script setup lang="ts">
-  //
+  const props = withDefaults(
+    defineProps<{
+      isShowBackButton?: boolean;
+    }>(),
+    {
+      isShowBackButton: false,
+    }
+  );
 </script>
 
 <template>
   <IonPage>
     <IonHeader :translucent="true">
       <IonToolbar>
+        <IonButtons v-if="props.isShowBackButton" slot="start">
+          <IonBackButton color="dark" text="返回" />
+        </IonButtons>
+
         <IonTitle>
           <h1 class="text-[20px] text-primary-default font-bold">
             <slot name="pageTitle"></slot>
