@@ -1,3 +1,32 @@
+## Requirements
+
+1. [doc: environments setup](https://capacitorjs.com/docs/getting-started/environment-setup)
+2. vscode
+3. ionic extension
+4. node version >= 18
+5. install cli
+```bash
+$ npm install -g @ionic/cli
+```
+
+- android
+
+  1. install needed sdk (by sdk manager)
+  2. install virtual device (by device manager?)
+
+## Development
+
+1. please open the ionic extension menu
+2. enable live reload in setting
+3. add ios or android project
+3. build the project
+4. sync the project
+5. run the ios or android
+
+## Production
+
+TODO
+
 ## How to add tailwindcss
 
 1. install
