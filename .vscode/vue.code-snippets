@@ -1,0 +1,34 @@
+{
+  "vueStart": {
+    "scope": "",
+    "prefix": "vueStart",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "//",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>$1</div>",
+      "</template>",
+      "",
+      "<style lang=\"postcss\" scoped></style>"
+    ],
+    "description": "vue start a component"
+  },
+    
+  "defaultProps": {
+    "scope": "",
+    "prefix": "defaultProps",
+    "body": [
+      "const props = withDefaults(",
+      "  defineProps<{",
+      "    example: string;",
+      "  }>(),",
+      "  {",
+      "    example: 'ex'",
+      "  }",
+      ")"
+    ],
+    "description": "default props"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  // vscode 某次升版會讓 autocomplete 的第一個不會自動 focus
+  // 這個可以解決
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+
+  // autocomplete use the camel case attribute
+  "vue.complete.casing.props": "camel",
+  "volar.completion.preferredAttrNameCase": "camel",
+
+  // 移除 <style> 裡面會冒出 0 reference 提示
+  "vue.codeLens.enabled": false
+}
