@@ -54,6 +54,7 @@
         "registeredComponentsOnly": false,
         "ignores": []
       }
-    ]
+    ],
+    "@typescript-eslint/no-empty-function": "off"
   }
 }
