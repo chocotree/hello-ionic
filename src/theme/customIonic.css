@@ -1,0 +1,11 @@
+/*
+  customize ionic css
+*/
+ion-header,
+ion-header ion-toolbar {
+  --min-height: 48px;
+}
+
+ion-footer ion-toolbar {
+  --min-height: 40px;
+}

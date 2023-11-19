@@ -1,0 +1,10 @@
+/*
+  https://swiperjs.com/swiper-api#scrollbar-css-custom-properties
+*/
+.home_footer {
+  --swiper-scrollbar-size: 2px;
+  --swiper-scrollbar-border-radius: 6px;
+  --swiper-scrollbar-bg-color: transparent;
+  --swiper-scrollbar-drag-bg-color: #66d1ab;
+  --swiper-scrollbar-top: 0;
+}

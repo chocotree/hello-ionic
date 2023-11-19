@@ -44,11 +44,7 @@ TODO
   }
   ```
 
-<!-- 3. 不要加入 tailwindcss preflight
-
-  移除 @tailwind base; -->
-
-4. 設定 dark mode 模式
+3. 設定 dark mode 模式
 
   在 tailwind.config.js 加上
 
@@ -84,3 +80,12 @@ TODO
 ## How to auto import ionic component
 
   [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components)
+
+## vite router package
+
+check if unplugin-vue-router can work
+
+replace current
+[vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)
+
+with [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)

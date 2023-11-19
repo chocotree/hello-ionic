@@ -1,0 +1,19 @@
+{
+  "class constructor": {
+    "prefix": "classconstructor",
+    "body": ["constructor(", "  $1", ") {}"],
+    "description": "class constructor"
+  },
+
+  "create class base on file name": {
+    "prefix": "classcreate",
+    "body": [
+      "export class ${TM_FILENAME_BASE/([a-z]*)[-@_.*0-9]+([a-z]*)/${1:/capitalize}${2:/capitalize}/g} {",
+      "  constructor() {",
+      "  ",
+      "  }",
+      "}"
+    ],
+    "description": "create class base on file name"
+  }
+}

@@ -1,43 +1,32 @@
 <script setup lang="ts">
-  const props = withDefaults(
-    defineProps<{
-      isShowBackButton?: boolean;
-    }>(),
-    {
-      isShowBackButton: false,
-    }
-  );
+  import { IonFooter } from '@ionic/vue';
 </script>
 
 <template>
   <IonPage>
-    <IonHeader :translucent="true">
+    <IonHeader>
       <IonToolbar>
-        <IonButtons v-if="props.isShowBackButton" slot="start">
-          <IonBackButton color="dark" text="返回" />
-        </IonButtons>
-
-        <IonTitle>
-          <h1 class="text-[20px] text-primary-default font-bold">
+        <div class="flex h-full i-center px-[15px]">
+          <h1 class="text-[18px] text-primary-default font-bold">
             <slot name="pageTitle"></slot>
           </h1>
-        </IonTitle>
+        </div>
       </IonToolbar>
     </IonHeader>
 
     <IonContent :fullscreen="true">
       <div class="w-full h-full overflow-y-auto no-scrollbar">
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <h1 class="text-[20px] text-primary-default font-bold">
-              <slot name="pageTitle"></slot>
-            </h1>
-          </IonToolbar>
-        </IonHeader>
-
-        <!-- default slot -->
+        <!-- 
+          default slot
+         -->
         <slot></slot>
       </div>
     </IonContent>
+
+    <IonFooter>
+      <IonContent>
+        <p>footer</p>
+      </IonContent>
+    </IonFooter>
   </IonPage>
 </template>

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <BasePageLayout :isShowBackButton="true">
+  <BasePageLayout>
     <template #pageTitle>筆記內容</template>
     <div class="px-[15px] pt-[20px]">筆記內容</div>
   </BasePageLayout>

@@ -1,5 +1,7 @@
 import legacy from '@vitejs/plugin-legacy';
+import Pages from 'vite-plugin-pages';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import path from 'path';
 import { defineConfig } from 'vite';
 import AutoImport from 'unplugin-auto-import/vite';
@@ -10,6 +12,8 @@ import { IonicResolver } from 'unplugin-vue-components/resolvers';
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
+    Pages(),
     legacy(),
     AutoImport({
       imports: [
@@ -28,6 +32,10 @@ export default defineConfig({
       extensions: ['nothing'],
     }),
   ],
+
+  server: {
+    port: 3003,
+  },
 
   resolve: {
     alias: {

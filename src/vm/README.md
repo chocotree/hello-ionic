@@ -1,1 +1,0 @@
-vm means viewModel
